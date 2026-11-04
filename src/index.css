@@ -1,0 +1,69 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-display: 'Outfit', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-lavender-light: #EDE7FF;
+  --color-lavender-accent: #DCD0FF;
+  --color-cream-warm: #FFF9F1;
+  --color-charcoal-deep: #292638;
+}
+
+:root {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --bg-primary: #FFF9F1;
+  --text-primary: #292638;
+}
+
+.font-display {
+  font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+}
+
+/* Custom gentle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(220, 208, 255, 0.6);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(180, 160, 240, 0.8);
+}
+
+/* Gentle pulsing breathing animation */
+@keyframes breatheScale {
+  0%, 100% {
+    transform: scale(0.92);
+    box-shadow: 0 0 25px rgba(220, 208, 255, 0.4);
+  }
+  50% {
+    transform: scale(1.15);
+    box-shadow: 0 0 45px rgba(220, 208, 255, 0.8);
+  }
+}
+
+.animate-breathe {
+  animation: breatheScale 8s ease-in-out infinite;
+}
+
+/* Soft ambient float */
+@keyframes softFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-soft-float {
+  animation: softFloat 5s ease-in-out infinite;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Soothely AI",
+  "description": "An emotional support and personal growth companion for school and college students. Your feelings matter. Your journey continues.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
